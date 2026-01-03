@@ -1,8 +1,12 @@
 "use client"
 
 import { useEffect, useState, useRef } from "react"
-import { Trophy, Calendar, MapPin, Award, Medal, Star } from "lucide-react"
+import { Trophy, Calendar, MapPin, Award, Medal } from "lucide-react"
 import { Countdown } from "./countdown"
+
+/* ===============================
+   Events (with image placeholders)
+================================ */
 
 const events = [
   {
@@ -12,6 +16,8 @@ const events = [
     location: "Home",
     description: "Our Start of the VEX Season",
     status: "completed" as const,
+    image:
+      "https://images.pexels.com/photos/1287145/pexels-photo-1287145.jpeg?cs=srgb&dl=pexels-eberhardgross-1287145.jpg&fm=jpg",
     awards: [],
   },
   {
@@ -21,6 +27,7 @@ const events = [
     location: "North Hollywood, CA",
     description: "First Official Competition",
     status: "completed" as const,
+    image: "https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg",
     awards: [{ name: "Think Award", type: "judged", icon: Award }],
   },
   {
@@ -30,10 +37,11 @@ const events = [
     location: "McBride HS, Long Beach",
     description: "Regional Competition",
     status: "completed" as const,
+    image: "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg",
     awards: [
       { name: "Tournament Finalists", type: "performance", icon: Trophy },
       { name: "Excellence Award", type: "excellence", icon: Medal },
-      { name: "Robot Skills Champion", type: "participation", icon: Medal }
+      { name: "Robot Skills Champion", type: "participation", icon: Medal },
     ],
   },
   {
@@ -43,6 +51,7 @@ const events = [
     location: "UC Berkeley, CA",
     description: "First Signature Event",
     status: "completed" as const,
+    image: "https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg",
     awards: [{ name: "Tournament Finalists", type: "performance", icon: Trophy }],
   },
   {
@@ -52,9 +61,10 @@ const events = [
     location: "San Diego, CA",
     description: "Practice with new robot",
     status: "completed" as const,
+    image: "https://images.pexels.com/photos/209251/pexels-photo-209251.jpeg",
     awards: [
       { name: "Tournament Champions", type: "performance", icon: Trophy },
-      { name: "Robot Skills Champion", type: "participation", icon: Medal }
+      { name: "Robot Skills Champion", type: "participation", icon: Medal },
     ],
   },
   {
@@ -64,9 +74,8 @@ const events = [
     location: "Studio City, CA",
     description: "Signature Event Practice",
     status: "completed" as const,
-    awards: [
-      { name: "Robot Skills Champion", type: "participation", icon: Medal }
-    ],
+    image: "https://images.pexels.com/photos/373076/pexels-photo-373076.jpeg",
+    awards: [{ name: "Robot Skills Champion", type: "participation", icon: Medal }],
   },
   {
     id: 7,
@@ -75,9 +84,10 @@ const events = [
     location: "Mesa, AZ",
     description: "Second Signature Event",
     status: "completed" as const,
+    image: "https://images.pexels.com/photos/462146/pexels-photo-462146.jpeg",
     awards: [
       { name: "Tournament Champions", type: "performance", icon: Trophy },
-      { name: "Robot Skills Champion", type: "participation", icon: Medal }
+      { name: "Robot Skills Champion", type: "participation", icon: Medal },
     ],
   },
   {
@@ -87,9 +97,14 @@ const events = [
     location: "Monroe, WA",
     description: "First Sig Event of 2026",
     status: "upcoming" as const,
+    image: "https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg",
     awards: [],
   },
 ]
+
+/* ===============================
+   Award styles
+================================ */
 
 const awardStyles = {
   excellence: { bg: "bg-amber-500/20", border: "border-amber-500/50", text: "text-amber-400" },
@@ -97,6 +112,10 @@ const awardStyles = {
   judged: { bg: "bg-purple-500/20", border: "border-purple-500/50", text: "text-purple-400" },
   participation: { bg: "bg-emerald-500/20", border: "border-emerald-500/50", text: "text-emerald-400" },
 }
+
+/* ===============================
+   Roadmap Section
+================================ */
 
 export function RoadmapSection() {
   const [scrollY, setScrollY] = useState(0)
@@ -108,9 +127,7 @@ export function RoadmapSection() {
     setWindowHeight(window.innerHeight)
     const handleScroll = () => {
       setScrollY(window.scrollY)
-      if (sectionRef.current) {
-        setSectionTop(sectionRef.current.offsetTop)
-      }
+      if (sectionRef.current) setSectionTop(sectionRef.current.offsetTop)
     }
     window.addEventListener("scroll", handleScroll, { passive: true })
     window.addEventListener("resize", () => setWindowHeight(window.innerHeight))
@@ -137,55 +154,23 @@ export function RoadmapSection() {
         </div>
 
         <div className="relative">
-          {/* Road track */}
+          {/* Track */}
           <div className="absolute left-1/2 top-0 bottom-0 w-2 -translate-x-1/2 bg-muted/30 rounded-full">
             <div
-              className="absolute top-0 left-0 right-0 bg-accent rounded-full transition-all duration-150 ease-out"
+              className="absolute top-0 left-0 right-0 bg-accent rounded-full transition-all duration-150"
               style={{ height: `${progress * 100}%` }}
             />
           </div>
 
-          {/* Car/Rover */}
+          {/* Rover */}
           <div
-            className="absolute left-1/2 -translate-x-1/2 z-30 pointer-events-none transition-all duration-150 ease-out"
+            className="absolute left-1/2 -translate-x-1/2 z-30 pointer-events-none transition-all duration-150"
             style={{ top: `${carPosition * 180 + 60}px` }}
           >
-            <div className="relative">
-              <div className="absolute inset-[-10px] bg-accent/30 rounded-full blur-xl" />
-              <svg width="60" height="45" viewBox="0 0 60 45" fill="none" className="relative z-10 drop-shadow-lg">
-                {/* Body */}
-                <rect x="10" y="12" width="40" height="18" rx="4" fill="#3366cc" />
-                <ellipse cx="30" cy="12" rx="12" ry="5" fill="#4477dd" />
-
-                {/* Dome */}
-                <circle cx="30" cy="10" r="3" fill="#88bbff">
-                  <animate attributeName="opacity" values="1;0.5;1" dur="1s" repeatCount="indefinite" />
-                </circle>
-
-                {/* Label */}
-                <rect x="16" y="17" width="28" height="9" rx="2" fill="#0a0a15" stroke="#6496ff" strokeWidth="0.5" />
-                <text
-                  x="30"
-                  y="24"
-                  textAnchor="middle"
-                  fill="#6496ff"
-                  fontSize="6"
-                  fontWeight="bold"
-                  fontFamily="monospace"
-                >
-                  98601Y
-                </text>
-
-                {/* Wheels */}
-                <circle cx="16" cy="33" r="5" fill="#2a2a2a" stroke="#444" strokeWidth="2" />
-                <circle cx="44" cy="33" r="5" fill="#2a2a2a" stroke="#444" strokeWidth="2" />
-                <circle cx="16" cy="33" r="1.5" fill="#555" />
-                <circle cx="44" cy="33" r="1.5" fill="#555" />
-              </svg>
-            </div>
+            <div className="w-12 h-6 bg-blue-600 rounded-md shadow-lg" />
           </div>
 
-          {/* Events - reduced spacing */}
+          {/* Events */}
           <div className="relative pt-4">
             {events.map((event, index) => {
               const isLeft = index % 2 === 0
@@ -195,27 +180,28 @@ export function RoadmapSection() {
                 <div
                   key={event.id}
                   className={`relative flex items-center ${isLeft ? "flex-row" : "flex-row-reverse"}`}
-                  style={{ minHeight: "140px", marginBottom: "40px" }}
+                  style={{ minHeight: "160px", marginBottom: "40px" }}
                 >
-                  {/* Event card */}
                   <div className={`w-[calc(50%-40px)] ${isLeft ? "pr-4 text-right" : "pl-4 text-left"}`}>
                     <div
-                      className={`relative p-4 rounded-xl border transition-all duration-500 ${
-                        isPassed ? "bg-card/90 border-accent/40 shadow-lg" : "bg-card/20 border-border/20 opacity-40"
+                      className={`p-4 rounded-xl border transition-all duration-500 h-[280px] flex flex-col ${
+                        isPassed
+                          ? "bg-card/90 border-accent/40 shadow-lg"
+                          : "bg-card/20 border-border/20 opacity-40"
                       }`}
-                      style={{
-                        transform: isPassed ? "scale(1)" : "scale(0.95)",
-                      }}
                     >
-                      {/* Image placeholder */}
-                      <div className="mb-3 h-24 rounded-lg overflow-hidden bg-muted/30 border border-border/30 flex items-center justify-center">
-                        <MapPin className="w-8 h-8 text-muted-foreground/30" />
-                      </div>
+                      {/* Image */}
+                      <div
+                        className="mb-3 h-28 rounded-lg bg-cover bg-center"
+                        style={{ backgroundImage: `url(${event.image})` }}
+                      />
 
                       <h3 className="text-sm font-bold text-foreground mb-1 font-display">{event.title}</h3>
 
                       <div
-                        className={`flex items-center gap-2 text-xs text-muted-foreground mb-1 ${isLeft ? "justify-end" : "justify-start"}`}
+                        className={`flex items-center gap-2 text-xs text-muted-foreground mb-1 ${
+                          isLeft ? "justify-end" : "justify-start"
+                        }`}
                       >
                         <Calendar className="w-3 h-3" />
                         {new Date(event.date).toLocaleDateString()}
@@ -225,19 +211,18 @@ export function RoadmapSection() {
 
                       <Countdown targetDate={event.date} status={event.status} />
 
-                      {/* Awards */}
                       {event.awards.length > 0 && (
-                        <div className={`flex flex-wrap gap-1.5 mt-2 ${isLeft ? "justify-end" : "justify-start"}`}>
+                        <div className={`flex flex-wrap gap-1.5 mt-auto ${isLeft ? "justify-end" : "justify-start"}`}>
                           {event.awards.map((award, i) => {
                             const style = awardStyles[award.type as keyof typeof awardStyles]
                             const Icon = award.icon
                             return (
                               <div
                                 key={i}
-                                className={`flex items-center gap-1 px-2 py-1 ${style.bg} border ${style.border} rounded-md text-[10px] ${style.text} font-medium`}
+                                className={`flex items-center gap-1 px-2 py-1 ${style.bg} border ${style.border} rounded-md text-[10px] ${style.text}`}
                               >
                                 <Icon className="w-2.5 h-2.5" />
-                                <span>{award.name}</span>
+                                {award.name}
                               </div>
                             )
                           })}
@@ -246,11 +231,11 @@ export function RoadmapSection() {
                     </div>
                   </div>
 
-                  {/* Center dot */}
+                  {/* Dot */}
                   <div className="absolute left-1/2 -translate-x-1/2 z-20">
                     <div
-                      className={`w-4 h-4 rounded-full border-2 transition-all duration-300 ${
-                        isPassed ? "bg-accent border-accent shadow-lg shadow-accent/50" : "bg-background border-muted"
+                      className={`w-4 h-4 rounded-full border-2 ${
+                        isPassed ? "bg-accent border-accent" : "bg-background border-muted"
                       }`}
                     />
                   </div>
