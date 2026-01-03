@@ -9,27 +9,33 @@ import { Trophy, Medal, Award, Star, Cpu } from "lucide-react"
 const robots = [
   {
     name: "Exposition",
-    type: "Hero Bot",
+    type: "Ruiguan-Style Bot",
     description:
-      "Our first competition robot designed as a glorified hero bot. Exposition competed in multiple tournaments and earned several prestigious awards through its reliable performance and innovative design.",
-    status: "Active",
+      "Our first competition robot designed as a Ruiguan-style Bot. Exposition competed in multiple tournaments and earned several prestigious awards through its reliable performance and innovative design.",
+    status: "Retired",
     awards: [
       { name: "Excellence Award", type: "excellence", icon: Medal },
+      { name: "Tournament Champions", type: "winning", icon: Trophy },
       { name: "Tournament Finalists", type: "performance", icon: Trophy },
       { name: "Tournament Finalists", type: "performance", icon: Trophy },
+      { name: "Robot Skills Champion", type: "participation", icon: Trophy },
       { name: "Think Award", type: "judged", icon: Award },
-      { name: "Ready to Launch", type: "participation", icon: Star },
     ],
-    images: 4,
+    images: 0,
   },
   {
-    name: "TBD",
+    name: "Atlantis",
     type: "S Bot",
     description:
       "Our second robot currently in development. This S bot design focuses on speed and efficiency with advanced autonomous capabilities. Stay tuned for updates as we prepare for upcoming competitions.",
-    status: "In Development",
-    awards: [],
-    images: 2,
+    status: "Active",
+    awards: [
+      { name: "Tournament Champions", type: "winning", icon: Trophy },
+      { name: "Robot Skills Champion", type: "participation", icon: Trophy },
+      { name: "Robot Skills Champion", type: "participation", icon: Trophy },
+      { name: "Robot Skills Champion", type: "participation", icon: Trophy },
+    ],
+    images: 0,
   },
 ]
 
@@ -39,6 +45,12 @@ const awardStyles = {
     border: "border-amber-500/50",
     text: "text-amber-400",
     glow: "shadow-amber-500/20",
+  },
+  winning: {
+    bg: "from-pink-500/25 to-pink-600/10",
+    border: "border-pink-500/50",
+    text: "text-pink-400",
+    glow: "shadow-pink-500/20",
   },
   performance: {
     bg: "from-blue-500/25 to-blue-600/10",
