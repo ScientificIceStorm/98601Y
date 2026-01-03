@@ -142,7 +142,16 @@ export default function AboutPage() {
             >
               Our Workshop
             </h2>
-            <WaveImageGallery images={[{ label: "Team Photo" }, { label: "Workshop" }]} />
+            <WaveImageGallery
+  images={[
+    {
+      src: "https://troyvex.org/oneworld/607617590_4202782159968673_7147195847232773575_n.jpg",
+      label: "Team Photo",
+      link: "#TEAM_IMAGE_LINK",
+    },
+  ]}
+/>
+
           </div>
 
           {/* Team members */}
