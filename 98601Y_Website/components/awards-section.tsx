@@ -33,6 +33,7 @@ const awardStyles = {
     border: "border-blue-500/40",
     text: "text-blue-400",
     shadow: "shadow-blue-500/20",
+  },
   winning: {
     bg: "from-pink-500/20 to-pink-600/10",
     border: "border-pink-500/40",
