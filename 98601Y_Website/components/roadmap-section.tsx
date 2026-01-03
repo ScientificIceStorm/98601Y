@@ -8,16 +8,16 @@ const events = [
   {
     id: 1,
     title: "Season Kickoff",
-    date: "2024-09-17T09:00:00",
-    location: "Home Base",
+    date: "2025-09-17T09:00:00",
+    location: "Home",
     description: "Our Start of the VEX Season",
     status: "completed" as const,
-    awards: [{ name: "Ready to Launch", type: "participation", icon: Star }],
+    awards: [],
   },
   {
     id: 2,
     title: "Supernova Spectacular",
-    date: "2024-11-09T08:00:00",
+    date: "2025-11-09T08:00:00",
     location: "North Hollywood, CA",
     description: "First Official Competition",
     status: "completed" as const,
@@ -26,19 +26,20 @@ const events = [
   {
     id: 3,
     title: "Beach Brawl Tournament",
-    date: "2024-11-15T08:30:00",
+    date: "2025-11-15T08:30:00",
     location: "McBride HS, Long Beach",
     description: "Regional Competition",
     status: "completed" as const,
     awards: [
       { name: "Tournament Finalists", type: "performance", icon: Trophy },
       { name: "Excellence Award", type: "excellence", icon: Medal },
+      { name: "Robot Skills Champion", type: "participation", icon: Medal }
     ],
   },
   {
     id: 4,
     title: "One World Signature",
-    date: "2024-11-21T09:00:00",
+    date: "2025-11-21T09:00:00",
     location: "UC Berkeley, CA",
     description: "First Signature Event",
     status: "completed" as const,
@@ -47,36 +48,44 @@ const events = [
   {
     id: 5,
     title: "San Diego Match Only",
-    date: "2024-12-07T09:00:00",
+    date: "2025-12-07T09:00:00",
     location: "San Diego, CA",
     description: "Practice with new robot",
-    status: "upcoming" as const,
-    awards: [],
+    status: "completed" as const,
+    awards: [
+      { name: "Tournament Champions", type: "performance", icon: Trophy }
+      { name: "Robot Skills Champion", type: "participation", icon: Medal }
+    ],
   },
   {
     id: 6,
     title: "Harvard-Westlake",
-    date: "2024-12-14T08:30:00",
+    date: "2025-12-14T08:30:00",
     location: "Studio City, CA",
     description: "Signature Event Practice",
-    status: "upcoming" as const,
-    awards: [],
+    status: "completed" as const,
+    awards: [
+      { name: "Robot Skills Champion", type: "participation", icon: Medal }
+    ],
   },
   {
     id: 7,
-    title: "Diamond in Desert",
-    date: "2024-12-30T09:00:00",
+    title: "Diamond in the Desert",
+    date: "2025-12-30T09:00:00",
     location: "Mesa, AZ",
     description: "Second Signature Event",
-    status: "upcoming" as const,
-    awards: [],
+    status: "completed" as const,
+    awards: [
+      { name: "Tournament Champions", type: "performance", icon: Trophy }
+      { name: "Robot Skills Champion", type: "participation", icon: Medal }
+    ],
   },
   {
     id: 8,
     title: "Ignite Northwest",
-    date: "2025-01-09T09:00:00",
+    date: "2026-01-09T09:00:00",
     location: "Monroe, WA",
-    description: "First Sig Event of 2025",
+    description: "First Sig Event of 2026",
     status: "upcoming" as const,
     awards: [],
   },
