@@ -13,7 +13,12 @@ const allAwards: AwardItem[] = [
   { name: "Tournament Finalists", type: "performance", icon: Trophy },
   { name: "Tournament Finalists", type: "performance", icon: Trophy },
   { name: "Think Award", type: "judged", icon: Award },
-  { name: "Ready to Launch", type: "participation", icon: Star },
+  { name: "Tournament Champions", type: "winning", icon: Trophy },
+  { name: "Tournament Champions", type: "winning", icon: Trophy },
+  { name: "Robot Skills Champions", type: "participation", icon: Trophy },
+  { name: "Robot Skills Champions", type: "participation", icon: Trophy },
+  { name: "Robot Skills Champions", type: "participation", icon: Trophy },
+  { name: "Robot Skills Champions", type: "participation", icon: Trophy },
 ]
 
 const awardStyles = {
@@ -28,6 +33,11 @@ const awardStyles = {
     border: "border-blue-500/40",
     text: "text-blue-400",
     shadow: "shadow-blue-500/20",
+  winning: {
+    bg: "from-pink-500/20 to-pink-600/10",
+    border: "border-pink-500/40",
+    text: "text-pink-400",
+    shadow: "shadow-pink-500/20",
   },
   judged: {
     bg: "from-purple-500/20 to-purple-600/10",
