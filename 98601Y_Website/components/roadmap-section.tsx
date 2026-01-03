@@ -53,7 +53,7 @@ const events = [
     description: "Practice with new robot",
     status: "completed" as const,
     awards: [
-      { name: "Tournament Champions", type: "performance", icon: Trophy }
+      { name: "Tournament Champions", type: "performance", icon: Trophy },
       { name: "Robot Skills Champion", type: "participation", icon: Medal }
     ],
   },
@@ -76,7 +76,7 @@ const events = [
     description: "Second Signature Event",
     status: "completed" as const,
     awards: [
-      { name: "Tournament Champions", type: "performance", icon: Trophy }
+      { name: "Tournament Champions", type: "performance", icon: Trophy },
       { name: "Robot Skills Champion", type: "participation", icon: Medal }
     ],
   },
