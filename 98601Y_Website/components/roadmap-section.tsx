@@ -27,7 +27,7 @@ const events = [
     location: "North Hollywood, CA",
     description: "First Official Competition",
     status: "completed" as const,
-    image: "https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg",
+    image: "https://www.a-dentalcenter.com/wp-content/uploads/2025/04/Dentist_In_North_Hollywood_CA_5-Things-To-Do-On-Your-Visit-To-North-H_SWbIG9Z.webp",
     awards: [{ name: "Think Award", type: "judged", icon: Award }],
   },
   {
@@ -37,7 +37,7 @@ const events = [
     location: "McBride HS, Long Beach",
     description: "Regional Competition",
     status: "completed" as const,
-    image: "https://images.pexels.com/photos/373543/pexels-photo-373543.jpeg",
+    image: "https://www.travelandleisure.com/thmb/ylL8WIuyyDm0gBRoBKAZnSQpE8w=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-lead-image-LONGBEACHCA1025-502b5501229a415393b2b7b929f4c061.jpg",
     awards: [
       { name: "Tournament Finalists", type: "performance", icon: Trophy },
       { name: "Excellence Award", type: "excellence", icon: Medal },
@@ -51,7 +51,7 @@ const events = [
     location: "UC Berkeley, CA",
     description: "First Signature Event",
     status: "completed" as const,
-    image: "https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg",
+    image: "https://drupal-prod.visitcalifornia.com/sites/default/files/styles/fluid_1920/public/VC_SpotlightBerkeley_Hero_Stock_RF_149303390_1280x640.jpg.webp?itok=x85UbgF5",
     awards: [{ name: "Tournament Finalists", type: "performance", icon: Trophy }],
   },
   {
@@ -61,7 +61,7 @@ const events = [
     location: "San Diego, CA",
     description: "Practice with new robot",
     status: "completed" as const,
-    image: "https://images.pexels.com/photos/209251/pexels-photo-209251.jpeg",
+    image: "https://geovea.com/blog/wp-content/uploads/2024/03/Bonandbon-Dw-DT-Mission-Bay-Beaches-San-Diego-CA-USA-GEOVEA.jpg",
     awards: [
       { name: "Tournament Champions", type: "performance", icon: Trophy },
       { name: "Robot Skills Champion", type: "participation", icon: Medal },
@@ -74,7 +74,7 @@ const events = [
     location: "Studio City, CA",
     description: "Signature Event Practice",
     status: "completed" as const,
-    image: "https://images.pexels.com/photos/373076/pexels-photo-373076.jpeg",
+    image: "https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=1280/https://media-production.lp-cdn.com/media/nffrzry01adlt0llk5fb",
     awards: [{ name: "Robot Skills Champion", type: "participation", icon: Medal }],
   },
   {
@@ -84,7 +84,7 @@ const events = [
     location: "Mesa, AZ",
     description: "Second Signature Event",
     status: "completed" as const,
-    image: "https://images.pexels.com/photos/462146/pexels-photo-462146.jpeg",
+    image: "https://media-production.lp-cdn.com/cdn-cgi/image/format=auto,quality=85,fit=scale-down,width=1280/https://media-production.lp-cdn.com/media/81c0bc2e-f36d-4538-a741-caa4cb676ec5",
     awards: [
       { name: "Tournament Champions", type: "performance", icon: Trophy },
       { name: "Robot Skills Champion", type: "participation", icon: Medal },
@@ -97,7 +97,7 @@ const events = [
     location: "Monroe, WA",
     description: "First Sig Event of 2026",
     status: "upcoming" as const,
-    image: "https://images.pexels.com/photos/256381/pexels-photo-256381.jpeg",
+    image: "https://www.visittheusa.com/sites/default/files/styles/hero_l/public/images/hero_media_image/2017-03/f3d1f001ce1e4f874adc9a88fd9fb095.jpeg?h=0bcfc31a&itok=hJ7McKcE",
     awards: [],
   },
 ]
