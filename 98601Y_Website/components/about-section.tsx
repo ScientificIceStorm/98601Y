@@ -4,16 +4,16 @@ import { useEffect, useRef, useState } from "react"
 
 const features = [
   {
-    title: "Engineering Excellence",
-    description: "We design and build competition-ready robots with precision engineering and innovative solutions.",
+    title: "Resilience",
+    description: "Inspired by the Space Shuttle Atlantis, we rise through failure and perform when the stakes are highest.",
   },
   {
-    title: "Team Collaboration",
-    description: "Our diverse team brings together unique skills in programming, design, and strategy.",
+    title: "Purposeful Engineering",
+    description: "We design, test, and iterate with discipline to deliver reliable, competitive robotic systems.",
   },
   {
-    title: "Continuous Learning",
-    description: "We embrace challenges as opportunities to grow and push the boundaries of what's possible.",
+    title: "Unified Excellence",
+    description: "Through collaboration, leadership, and shared responsibility, we push beyond limits together.",
   },
 ]
 
@@ -58,9 +58,7 @@ export function AboutSection() {
               <span className="text-accent">Atlantis</span>
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Team 98601Y Atlantis is a competitive VEX Robotics team dedicated to innovation, excellence, and pushing
-              the boundaries of what&apos;s possible in robotics competition. Like the legendary city, we rise from the
-              depths to achieve greatness.
+              Team 98601Y Atlantis is a competitive VEX Robotics team driven by innovation, excellence, and resilience. Our name honors the Space Shuttle Atlantis—a symbol of perseverance in the face of failure, overcoming technical adversity and succeeding when the stakes were highest. Guided by that legacy, we view challenges not as obstacles but as catalysts for growth. Through disciplined engineering, relentless iteration, and unified teamwork, we rise after every setback and push beyond perceived limits to achieve excellence in VEX Robotics competition.
             </p>
           </div>
 
