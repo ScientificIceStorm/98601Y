@@ -164,7 +164,7 @@ export default function AboutPage() {
                   link: "#TEAM_IMAGE_LINK",
                 },
                 {
-                  src: "https://media.discordapp.net/attachments/900591595315929098/1447448451255373874/image.png?format=webp&quality=lossless",
+                  src: "https://media.discordapp.net/attachments/900591595315929098/1447448451255373874/image.png?ex=6959472b&is=6957f5ab&hm=911b5b62ca4da69b2d4a84a3f614db1c68cb80538ae0e4807da38e5dac52ad9e&=&format=webp&quality=lossless",
                   label: "Workshop",
                   link: "#TEAM_IMAGE_LINK",
                 },
