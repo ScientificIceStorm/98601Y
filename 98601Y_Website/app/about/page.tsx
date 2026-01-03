@@ -6,6 +6,10 @@ import { Footer } from "@/components/footer"
 import { ParticleField } from "@/components/particle-field"
 import { Users, Code, Wrench, Target } from "lucide-react"
 
+/* ===============================
+   Team Data
+================================ */
+
 const teamMembers = [
   { name: "Team Member 1", role: "Lead Builder", icon: Wrench },
   { name: "Team Member 2", role: "Lead Programmer", icon: Code },
@@ -14,7 +18,7 @@ const teamMembers = [
 ]
 
 /* ===============================
-   Wave Image Gallery (FIXED)
+   Wave Image Gallery
 ================================ */
 
 type GalleryImage = {
@@ -33,12 +37,13 @@ function WaveImageGallery({ images }: { images: GalleryImage[] }) {
         <svg viewBox="0 0 1200 40" className="w-full h-full animate-wave" preserveAspectRatio="none">
           <path
             d="M0 20 Q150 0 300 20 T600 20 T900 20 T1200 20 V40 H0 Z"
-            fill="rgba(100, 150, 255, 0.08)"
+            fill="rgba(100,150,255,0.08)"
           />
         </svg>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6 relative z-10">
+      {/* Images */}
+      <div className="flex gap-6 items-stretch relative z-10">
         {images.map((img, i) => {
           const Wrapper = img.link ? "a" : "div"
           return (
@@ -47,7 +52,7 @@ function WaveImageGallery({ images }: { images: GalleryImage[] }) {
               href={img.link}
               target={img.link ? "_blank" : undefined}
               rel={img.link ? "noopener noreferrer" : undefined}
-              className="group relative aspect-video rounded-2xl overflow-hidden bg-card border border-border/40 cursor-pointer transition-all duration-500 hover:border-accent/50 hover:shadow-xl hover:shadow-accent/10"
+              className="group relative h-[360px] flex-1 rounded-2xl overflow-hidden bg-card border border-border/40 cursor-pointer transition-all duration-500 hover:border-accent/50 hover:shadow-xl hover:shadow-accent/10"
               onMouseEnter={() => setHoveredIndex(i)}
               onMouseLeave={() => setHoveredIndex(null)}
               style={{
@@ -57,7 +62,7 @@ function WaveImageGallery({ images }: { images: GalleryImage[] }) {
             >
               {/* Image */}
               <div
-                className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                className="absolute inset-0 bg-contain bg-top bg-no-repeat transition-transform duration-700 group-hover:scale-105"
                 style={{ backgroundImage: `url(${img.src})` }}
               />
 
@@ -71,7 +76,7 @@ function WaveImageGallery({ images }: { images: GalleryImage[] }) {
                 }}
               />
 
-              {/* Label overlay */}
+              {/* Label */}
               <div className="absolute inset-0 flex items-center justify-center bg-black/35 opacity-0 group-hover:opacity-100 transition-opacity">
                 <p className="text-white text-sm font-display tracking-wide">
                   {img.label}
@@ -95,7 +100,7 @@ function WaveImageGallery({ images }: { images: GalleryImage[] }) {
         >
           <path
             d="M0 20 Q150 0 300 20 T600 20 T900 20 T1200 20 V40 H0 Z"
-            fill="rgba(100, 150, 255, 0.08)"
+            fill="rgba(100,150,255,0.08)"
           />
         </svg>
       </div>
@@ -145,7 +150,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          {/* Image gallery */}
+          {/* Workshop Images */}
           <div className="mb-24">
             <h2 className="text-3xl font-bold text-foreground mb-8 font-display">
               Our Workshop
@@ -158,11 +163,16 @@ export default function AboutPage() {
                   label: "Team Photo",
                   link: "#TEAM_IMAGE_LINK",
                 },
+                {
+                  src: "https://media.discordapp.net/attachments/900591595315929098/1447448451255373874/image.png?format=webp&quality=lossless",
+                  label: "Workshop",
+                  link: "#TEAM_IMAGE_LINK",
+                },
               ]}
             />
           </div>
 
-          {/* Team members */}
+          {/* Team */}
           <div className="mb-24">
             <h2 className="text-3xl font-bold text-foreground mb-12 font-display">
               Meet The Team
