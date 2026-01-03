@@ -51,7 +51,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 text-muted-foreground hover:text-accent transition-colors text-sm group"
               >
-                VEX Robotics <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                About VEX Robotics <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
               <a
                 href="https://www.robotevents.com/robot-competitions/vex-robotics-competition"
@@ -59,7 +59,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 text-muted-foreground hover:text-accent transition-colors text-sm group"
               >
-                Skills Standings{" "}
+                Global Skills Standings{" "}
                 <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
               <a
@@ -68,7 +68,7 @@ export function Footer() {
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 text-muted-foreground hover:text-accent transition-colors text-sm group"
               >
-                Team 98601Y Page{" "}
+                98601Y RoboEvents Team Page{" "}
                 <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
             </div>
