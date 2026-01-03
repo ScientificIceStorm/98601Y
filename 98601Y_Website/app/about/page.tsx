@@ -11,10 +11,10 @@ import { Users, Code, Wrench, Target } from "lucide-react"
 ================================ */
 
 const teamMembers = [
-  { name: "Team Member 1", role: "Lead Builder", icon: Wrench },
-  { name: "Team Member 2", role: "Lead Programmer", icon: Code },
-  { name: "Team Member 3", role: "Strategy Lead", icon: Target },
-  { name: "Team Member 4", role: "Team Captain", icon: Users },
+  { name: "Mason Zhong", role: "Team Captain, Lead Builder", icon: Users },
+  { name: "Felix Chen", role: "Lead Notebooker, Scouting", icon: Target },
+  { name: "Albert Zhang", role: "Lead Scouter, Design, Notebook", icon: Wrench},
+  { name: "Nathan Lee", role: "Lead Coder", icon: Code },
 ]
 
 /* ===============================
@@ -145,15 +145,14 @@ export default function AboutPage() {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground max-w-3xl">
-              Team 98601Y Atlantis is a competitive VEX Robotics team from Troy High School dedicated to innovation,
-              excellence, and pushing the boundaries of what's possible.
+              Team 98601Y Atlantis is a competitive VEX Robotics team from Troy High School composed of 4 people, 3 freshman and 1 sophomore. This year, we've achieved a lot, including an excellence award, 4 times Robot Skills Champions, and 2 times Tournament Champions, including one Signature Event win. We have already qualified for California Region 4 State Championships and VEX Worlds. 
             </p>
           </div>
 
           {/* Workshop Images */}
           <div className="mb-24">
             <h2 className="text-3xl font-bold text-foreground mb-8 font-display">
-              Our Workshop
+              Our Team
             </h2>
 
             <WaveImageGallery
@@ -161,12 +160,12 @@ export default function AboutPage() {
                 {
                   src: "https://troyvex.org/oneworld/607617590_4202782159968673_7147195847232773575_n.jpg",
                   label: "Team Photo",
-                  link: "#TEAM_IMAGE_LINK",
+                  link: "https://www.robotevents.com/teams/V5RC/98601Y",
                 },
                 {
                   src: "https://media.discordapp.net/attachments/900591595315929098/1447448451255373874/image.png?ex=6959472b&is=6957f5ab&hm=911b5b62ca4da69b2d4a84a3f614db1c68cb80538ae0e4807da38e5dac52ad9e&=&format=webp&quality=lossless",
-                  label: "Workshop",
-                  link: "#TEAM_IMAGE_LINK",
+                  label: "Robot Photo",
+                  link: "https://www.robotevents.com/teams/V5RC/98601Y",
                 },
               ]}
             />
@@ -209,8 +208,7 @@ export default function AboutPage() {
               Our Mission
             </h3>
             <p className="text-muted-foreground text-lg max-w-3xl">
-              We design and build innovative robots while fostering a collaborative environment where every team
-              member can learn, grow, and contribute.
+              Our mission is to push beyond the boundaries of innovation by developing, testing, and refining robotic solutions that demonstrate both technical prowess and strategic thinking. Through teamwork, resilience, and a commitment to relentless improvement, we aim to compete with integrity, learn with purpose, and inspire others in both the STEM and NJROTC communities. 
             </p>
           </div>
         </div>
